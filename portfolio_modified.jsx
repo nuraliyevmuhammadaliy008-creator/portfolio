@@ -202,16 +202,10 @@ const T = {
 const DB = {
   users: [{ id: 1, name: "Muhammad Ali Nuraliyev", email: "admin@alinuraliyev.dev", password: "admin123", role: "admin", avatar: "MA", bio: "Full Stack Developer & Software Architect" }],
   projects: [
-    { id: 1, title: "E-Commerce Platform", tech: "React, Node.js, PostgreSQL", status: "live", views: 1240, stars: 48, desc: { uz: "Keng ko'lamli savdo platformasi", ru: "Широкая торговая платформа", en: "Large-scale e-commerce platform" } },
-    { id: 2, title: "AI Chat System", tech: "Python, FastAPI, Redis", status: "live", views: 987, stars: 62, desc: { uz: "AI asosida ish yurituvchi chat", ru: "Чат на основе ИИ", en: "AI-powered chat system" } },
-    { id: 3, title: "DevOps Dashboard", tech: "Vue.js, Docker, K8s", status: "beta", views: 543, stars: 31, desc: { uz: "Monitoring paneli", ru: "Панель мониторинга", en: "Cloud infrastructure monitoring" } },
-    { id: 4, title: "Mobile Banking App", tech: "React Native, GraphQL", status: "live", views: 2103, stars: 95, desc: { uz: "Xavfsiz mobil bank ilovasi", ru: "Безопасное мобильное банковское приложение", en: "Secure mobile banking app" } },
-    { id: 5, title: "Real-time Analytics", tech: "Next.js, ClickHouse", status: "dev", views: 321, stars: 17, desc: { uz: "Katta ma'lumotlar tahlili", ru: "Аналитика больших данных", en: "Big data analytics dashboard" } },
-    { id: 6, title: "Blockchain Wallet", tech: "Solidity, Web3.js", status: "beta", views: 678, stars: 44, desc: { uz: "Desentralized kriptovalyuta hamyoni", ru: "Децентрализованный крипто-кошелёк", en: "Decentralized crypto wallet" } },
-    { id: 7, title: "Ymarket (Dark)", tech: "React, Tailwind CSS, Node.js", status: "live", views: 1850, stars: 73, screenshot: 0, desc: { uz: "Elektronika mahsulotlari uchun zamonaviy e-commerce platforma", ru: "Современная e-commerce платформа для электроники", en: "Modern e-commerce platform for electronics" } },
-    { id: 8, title: "Lord Fruit", tech: "React, i18n, CSS Modules", status: "live", views: 2340, stars: 91, screenshot: 1, desc: { uz: "Quritilgan mevalar eksporti uchun ko'p tilli veb-sayt", ru: "Многоязычный сайт для экспорта сухофруктов", en: "Multilingual website for dried fruit export" } },
-    { id: 9, title: "Ymarket (Light)", tech: "React, Next.js, MongoDB", status: "live", views: 1120, stars: 55, screenshot: 2, desc: { uz: "Organik sabzavot va mevalar uchun onlayn do'kon", ru: "Онлайн-магазин органических продуктов", en: "Online store for organic vegetables and fruits" } },
-    { id: 10, title: "Keystore", tech: "React, TypeScript, Stripe", status: "beta", views: 980, stars: 42, screenshot: 3, desc: { uz: "Premium klaviaturalar uchun ixtisoslashgan onlayn do'kon", ru: "Специализированный магазин клавиатур", en: "Specialized online store for premium keyboards" } },
+    { id: 1, title: "Ymarket (Dark)", tech: "React, Tailwind CSS, Node.js", status: "live", views: 1850, stars: 73, screenshot: 0, desc: { uz: "Elektronika mahsulotlari uchun zamonaviy e-commerce platforma", ru: "Современная e-commerce платформа для электроники", en: "Modern e-commerce platform for electronics" } },
+    { id: 2, title: "Lord Fruit", tech: "React, i18n, CSS Modules", status: "live", views: 2340, stars: 91, screenshot: 1, desc: { uz: "Quritilgan mevalar eksporti uchun ko'p tilli veb-sayt", ru: "Многоязычный сайт для экспорта сухофруктов", en: "Multilingual website for dried fruit export" } },
+    { id: 3, title: "Ymarket (Light)", tech: "React, Next.js, MongoDB", status: "live", views: 1120, stars: 55, screenshot: 2, desc: { uz: "Organik sabzavot va mevalar uchun onlayn do'kon", ru: "Онлайн-магазин органических продуктов", en: "Online store for organic vegetables and fruits" } },
+    { id: 4, title: "Keystore", tech: "React, TypeScript, Stripe", status: "beta", views: 980, stars: 42, screenshot: 3, desc: { uz: "Premium klaviaturalar uchun ixtisoslashgan onlayn do'kon", ru: "Специализированный магазин клавиатур", en: "Specialized online store for premium keyboards" } },
   ],
   messages: [
     { id: 1, from: "Ibrohim Vafoyev", email: "jasur@mail.com", text: "Portfolio juda chiroyli!", date: "2025-05-20", read: false },
@@ -590,6 +584,14 @@ function ProjectsPage({ t, lang }) {
                 src={PROJECT_SCREENSHOTS[p.screenshot]}
                 alt={p.title}
                 className="proj-screenshot"
+                style={{
+                  width: "100%",
+                  height: "200px",
+                  objectFit: "cover",
+                  objectPosition: "top",
+                  borderRadius: "10px",
+                  marginBottom: "12px",
+                }}
               />
             ) : (
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
