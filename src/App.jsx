@@ -491,7 +491,7 @@ function LangSwitcher({ lang, setLang }) {
 
 // ==================== ABOUT PAGE (YANGILANGAN) ====================
 function AboutPage({ t, lang }) {
-  const skills = ["Node.js", "Python", "Express.js", "PostgreSQL", "MongoDB", "REST API", "Git", "Docker", "React", "JavaScript"];
+  const skills = ["Node.js", "Html", "Express.js", "PostgreSQL", "Tailwind CSS", "REST API", "Git", "Css", "React Js", "JavaScript"];
   const bioText = {
     uz: "Yosh va istiqbolli backend developer. Node.js, Python va ma'lumotlar bazalari bilan ixtisoslashgan. RESTful API va microservices arxitekturasi bo'yicha tajribaga ega. Har kuni yangi texnologiyalar o'rganib, zamonaviy yechimlar yaratishga intiladi.",
     ru: "Молодой и перспективный backend разработчик. Специализируется на Node.js, Python и базах данных. Имеет опыт в RESTful API и микросервисной архитектуре.",
